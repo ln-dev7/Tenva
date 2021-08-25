@@ -1,0 +1,80 @@
+.banner{
+    height: calc(100vh - 113px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../Assets/Img/banner-1.jpg');
+    background-position: 50% 85%;
+    background-attachment: fixed;
+    background-size: cover;
+    &-container{
+        &-title{
+            text-align: center;
+            font-family: $font-1;
+            font-size: 2em;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+            color: #fff;
+            margin: 0.5em;
+        }
+        &-subtitle{
+            text-align: center;
+            font-family: $font-1;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: $black; 
+            margin-top: 75px;
+            span{
+                color: $color-1;
+            }  
+        }
+    }
+    &-scroll {
+        position: absolute;
+        bottom: 2.5%;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 0 0 0 $color-2;
+        border: 2px solid $color-1;
+        transition: transform .3s;
+        animation: pulse 1.3s infinite;
+        &:hover{
+            position: absolute;
+            bottom: 2.5%;
+            left: 50%;
+            transform: translateX(-50%) scale(1.2);
+        }
+        &:hover img {
+            transform: rotate(360deg);
+        }
+    }
+      
+    @keyframes pulse {
+        to {
+          box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.01);
+        }
+    }
+    &-scroll img {
+        width: 18px;
+        height: 18px;
+        transition: transform $anim-1 .3s;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .banner{
+        height: calc(100vh - 124px);
+        background-image: url('../Assets/Img/banner-2.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
