@@ -1,5 +1,5 @@
 .banner{
-    height: calc(100vh - 113px);
+    min-height: calc(100vh - 113px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 780px){
     .banner{
-        height: calc(100vh - 124px);
+        min-height: calc(100vh - 124px);
         background-image: url('../Assets/Img/banner-2.jpg');
         background-position: center;
         background-attachment: fixed;
