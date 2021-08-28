@@ -27,7 +27,7 @@ $anim-1: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   text-decoration: none;
 }
 html{ 
-  scroll-behavior: unset;
+  scroll-behavior: smooth;
 }
 body{
   font-family: sans-serif;
